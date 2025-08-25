@@ -20,7 +20,7 @@ html {
 }
 
 body {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   background-color: var(--bg);
   line-height: 1.6;
   overflow-x: hidden;
@@ -56,7 +56,7 @@ body {
   color: white;
   font-size: 1rem;
   display: inline-block;
-  margin: 0.1rem;
+  margin: 0 1rem;
 }
 
 .navbar .navigasi a:hover {
@@ -76,7 +76,7 @@ body {
   transform: scaleX(0.5);
 }
 
-#hamburger {
+.hamburger {
   display: none;
 }
 
@@ -108,7 +108,7 @@ body {
 }
 
 .hero .content p {
-  line-height: 0.1rem;
+  line-height: 1.4;
   font-size: 1.1rem;
   color: #fff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
@@ -117,20 +117,19 @@ body {
 
 .hero .content .cta {
   display: inline-block;
-  padding: 1rem 2rem ;
+  padding: 1rem 2rem;
   background-color: var(--warna3);
   color: white;
   font-size: 1rem;
   font-weight: 600;
-  border-radius: 5px;
+  border-radius: 25px;
   transition: all 0.3s ease;
   text-shadow: none;
-  border-radius: 25px;
 }
 
 .hero .content .cta:hover {
   background-color: var(--warna2);
-  transform: translateY(-0.5px);
+  transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -156,12 +155,14 @@ body {
   text-align: center;
   font-size: 1.8rem;
   margin-bottom: 3rem;
+  color: var(--teks1);
 }
 
 .about .row {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+  align-items: center;
 }
 
 .about .logo {
@@ -170,8 +171,8 @@ body {
 }
 
 .about .logo h2 {
-  color: white;
-  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
+  color: var(--teks2);
+  font-size: 2.5rem;
 }
 
 .about .logo h2 span {
@@ -184,22 +185,165 @@ body {
 }
 
 .about .content p {
-  color: black;
+  color: var(--teks2);
   font-size: 1.1rem;
+  text-align: justify;
 }
 
 .about .content p span {
   color: var(--teks1);
-  font-weight: 500;
-  font-size: 1.5rem;
-  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 
 .fasilitas {
-  padding: 5rem 3rem 3rem; 
+  padding: 5rem 0 3rem;
 }
 
 .fasilitas h2 {
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  color: var(--teks1);
+  padding: 0 7%;
+}
+
+.fasilitas h2 span {
+  color: var(--warna3);
+}
+
+.container {
+  display: flex;
+  width: max-content;
+  gap: 1rem;
+}
+
+.fasilitas-row {
+  width: 100%;
+  overflow-x: scroll;
+  scrollbar-color: transparent transparent;
+}
+
+.fasilitas-row::-webkit-scrollbar {
+  display: none;
+}
+
+.fasilitas-item {
+  min-width: 280px  ;
+  max-width: 500px;
+  flex-shrink: 0;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.fasilitas-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.fasilitas-img {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.fasilitas-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.fasilitas-item:hover .fasilitas-img img {
+  transform: scale(1.1);
+}
+
+.fasilitas-item h3 {
+  padding: 1rem 1.5rem 0.5rem;
+  font-size: 1.3rem;
+  color: var(--teks1);
+  font-weight: 600;
+  justify-self: center;
+}
+
+.fasilitas-item p {
+  padding: 0 1.5rem 1.5rem;
+  color: var(--teks2);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  max-width: 450px;
+}
+
+.layanan {
+  padding: 5rem 7% 3rem;
+  background-color: var(--bg);
+}
+
+.layanan h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  color: var(--teks1);
+}
+
+.layanan h2 span {
+  color: var(--warna3);
+}
+
+.layanan-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.layanan-item {
+  background: white;
+  
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.layanan-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.layanan-img {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.layanan-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.layanan-item:hover .layanan-img img {
+  transform: scale(1.1);
+}
+
+.layanan-item h3 {
+  padding: 1rem 1.5rem 0.5rem;
+  font-size: 1.3rem;
+  color: var(--teks1);
+  font-weight: 600;
+}
+
+.layanan-item p {
+  padding: 0 1.5rem 1.5rem;
+  color: var(--teks2);
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
