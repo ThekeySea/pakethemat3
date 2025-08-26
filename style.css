@@ -140,11 +140,7 @@ body {
   width: 100%;
   height: 30%;
   bottom: 0;
-  background: linear-gradient(
-    0deg,
-    #f5f0e1 1%,
-    rgba(245, 240, 225, 0) 25%
-  );
+  background: linear-gradient(0deg, #f5f0e1 1%, rgba(245, 240, 225, 0) 25%);
 }
 
 .about {
@@ -197,7 +193,7 @@ body {
 }
 
 .fasilitas {
-  padding: 5rem 0 3rem;
+  padding: 5rem 7% 3rem;
 }
 
 .fasilitas h2 {
@@ -205,32 +201,32 @@ body {
   font-size: 2.2rem;
   margin-bottom: 3rem;
   color: var(--teks1);
-  padding: 0 7%;
 }
 
 .fasilitas h2 span {
   color: var(--warna3);
 }
 
-.container {
-  display: flex;
-  width: max-content;
-  gap: 1rem;
+.fasilitas .row {
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-.fasilitas-row {
-  width: 100%;
-  overflow-x: scroll;
-  scrollbar-color: transparent transparent;
-}
-
-.fasilitas-row::-webkit-scrollbar {
+.fasilitas .row::-webkit-scrollbar {
   display: none;
 }
 
+.container {
+  display: flex;
+  gap: 1.5rem;
+  padding-bottom: 1rem;
+  width: max-content;
+}
+
 .fasilitas-item {
-  min-width: 280px  ;
-  max-width: 500px;
+  min-width: 280px;
+  max-width: 320px;
   flex-shrink: 0;
   background: white;
   border-radius: 15px;
@@ -241,13 +237,13 @@ body {
 }
 
 .fasilitas-item:hover {
-  transform: scale(1.1);
+  transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 .fasilitas-img {
   width: 100%;
-  height: 250px;
+  height: 200px;
   overflow: hidden;
 }
 
@@ -267,7 +263,6 @@ body {
   font-size: 1.3rem;
   color: var(--teks1);
   font-weight: 600;
-  justify-self: center;
 }
 
 .fasilitas-item p {
@@ -275,7 +270,6 @@ body {
   color: var(--teks2);
   font-size: 0.95rem;
   line-height: 1.5;
-  max-width: 450px;
 }
 
 .layanan {
@@ -296,7 +290,7 @@ body {
 
 .layanan-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -304,7 +298,6 @@ body {
 
 .layanan-item {
   background: white;
-  
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -319,7 +312,7 @@ body {
 
 .layanan-img {
   width: 100%;
-  height: 350px;
+  height: 250px;
   overflow: hidden;
 }
 
@@ -348,4 +341,189 @@ body {
   line-height: 1.5;
 }
 
-/* akomodasi */
+/* AKOMODASI - DIPERBAIKI */
+.akomodasi {
+  padding: 5rem 7% 3rem;
+  background-color: var(--bg);
+}
+
+.akomodasi .baganatas {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.akomodasi .baganatas h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--teks1);
+}
+
+.akomodasi .baganatas h1 span {
+  color: var(--warna3);
+}
+
+.akomodasi .baganatas p {
+  font-size: 1.1rem;
+  color: var(--teks2);
+  font-style: italic;
+}
+
+.akomodasi-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.akomodasi-item {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.akomodasi-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.akomodasi-img {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+.akomodasi-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.akomodasi-item:hover .akomodasi-img img {
+  transform: scale(1.1);
+}
+
+.price-tag {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--warna3);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  z-index: 2;
+}
+
+.akomodasi-content {
+  padding: 1.5rem;
+}
+
+.akomodasi-item h3 {
+  font-size: 1.4rem;
+  color: var(--teks1);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+.akomodasi-item h3 span {
+  color: var(--warna3);
+}
+
+.akomodasi-item p {
+  color: var(--teks2);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.features {
+  list-style: none;
+  margin: 1rem 0;
+}
+
+.features li {
+  color: var(--teks2);
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.features li::before {
+  content: "✓";
+  color: var(--warna3);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.book-btn {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--warna3);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.book-btn:hover {
+  background-color: var(--warna2);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar .navigasi {
+    display: none;
+  }
+  
+  .hamburger {
+    display: block;
+  }
+  
+  .hero .content h2 {
+    font-size: 2.5rem;
+  }
+  
+  .layanan-container,
+  .akomodasi-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .about .row {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero .content h2 {
+    font-size: 2rem;
+  }
+  
+  .fasilitas-item,
+  .layanan-item,
+  .akomodasi-item {
+    min-width: 250px;
+  }
+}
