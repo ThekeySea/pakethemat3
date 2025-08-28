@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tugas</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <nav class="navbar">
@@ -30,9 +31,9 @@
 
     <section class="hero" id="home">
       <main class="content">
-        <h2>Halo, apa kabar!</h2>
-        <p>Ingin menginap di Everwood Resort?</p>
-        <a href="#reservasi" class="cta">Reservasi Sekarang</a>
+        <h2 data-aos="fade-down" data-aos-delay="100">Halo, apa kabar!</h2>
+        <p data-aos="fade-right" data-aos-delay="100">Ingin menginap di Everwood Resort?</p>
+        <a href="#reservasi" class="cta" data-aos="fade-up" data-aos-delay="100">Reservasi Sekarang</a>
       </main>
     </section>
 
@@ -133,7 +134,7 @@
     <section class="layanan" id="layanan">
       <h2><span>Layanan</span> Kami</h2>
       <div class="layanan-container">
-        <div class="layanan-item">
+        <div class="layanan-item" data-aos="zoom-in-right" data-aos-delay="100">
           <div class="layanan-img">
             <img src="./gambar/room-service.jpg" alt="Room Service" />
           </div>
@@ -144,7 +145,7 @@
           </p>
         </div>
 
-        <div class="layanan-item">
+        <div class="layanan-item" data-aos="zoom-in-up" data-aos-delay="101">
           <div class="layanan-img">
             <img src="./gambar/laundry-service.jpg" alt="Laundry Service" />
           </div>
@@ -155,7 +156,7 @@
           </p>
         </div>
 
-        <div class="layanan-item">
+        <div class="layanan-item" data-aos="zoom-in-left" data-aos-delay="102">
           <div class="layanan-img">
             <img src="./gambar/airport-transfer.jpg" alt="Airport Transfer" />
           </div>
@@ -166,7 +167,7 @@
           </p>
         </div>
 
-        <div class="layanan-item">
+        <div class="layanan-item" data-aos="zoom-in-right" data-aos-delay="103">
           <div class="layanan-img">
             <img src="./gambar/spa-pijet.jpg" alt="Spa" />
           </div>
@@ -177,7 +178,7 @@
           </p>
         </div>
 
-        <div class="layanan-item">
+        <div class="layanan-item" data-aos="zoom-in-up" data-aos-delay="104">
           <div class="layanan-img">
             <img src="./gambar/concierge.jpeg" alt="concierge" />
           </div>
@@ -188,7 +189,7 @@
           </p>
         </div>
 
-        <div class="layanan-item">
+        <div class="layanan-item" data-aos="zoom-in-left" data-aos-delay="105">
           <div class="layanan-img">
             <img src="./gambar/freewifi.jpg" alt="freewifi" />
           </div>
@@ -209,10 +210,10 @@
       </div>
 
       <div class="akomodasi-container">
-        <div class="akomodasi-item">
+        <div class="akomodasi-item" data-aos="flip-right" data-aos-delay="100">
           <div class="akomodasi-img">
             <img src="./gambar/economy.jpg" alt="Kelas Ekonomi" />
-            <div class="price-tag">Rp 500K/malam</div>
+            <div class="price-tag">Rp 1JT/malam</div>
           </div>
           <div class="akomodasi-content">
             <h3>Tranquil Nest</h3>
@@ -228,14 +229,14 @@
               <li>Kamar mandi pribadi</li>
               <li>Sarapan kontinental</li>
             </ul>
-            <button class="book-btn">Pesan Sekarang</button>
+            <a href="#reservasi" class="book-btn">Pesan Sekarang</a>
           </div>
         </div>
 
-        <div class="akomodasi-item">
+        <div class="akomodasi-item" data-aos="fade-up" data-aos-delay="200">
           <div class="akomodasi-img">
             <img src="./gambar/business.jpg" alt="Kelas Business" />
-            <div class="price-tag">Rp 800K/malam</div>
+            <div class="price-tag">Rp 2.5JT/malam</div>
           </div>
           <div class="akomodasi-content">
             <h3>Serenity Room</h3>
@@ -251,14 +252,14 @@
               <li>Akses lounge business</li>
               <li>Room service 24 jam</li>
             </ul>
-            <button class="book-btn">Pesan Sekarang</button>
+            <a href="#reservasi" class="book-btn">Pesan Sekarang</a>
           </div>
         </div>
 
-        <div class="akomodasi-item">
+        <div class="akomodasi-item" data-aos="flip-left" data-aos-delay="300">
           <div class="akomodasi-img">
             <img src="./gambar/vip.jpg" alt="Kelas VIP" />
-            <div class="price-tag">Rp 1.5JT/malam</div>
+            <div class="price-tag">Rp 4.5JT/malam</div>
           </div>
           <div class="akomodasi-content">
             <h3>Royal Pavilion</h3>
@@ -274,7 +275,7 @@
               <li>Pemandangan taman dan pegunungan</li>
               <li>Akses eksklusif spa dan kolam VIP</li>
             </ul>
-            <button class="book-btn">Pesan Sekarang</button>
+            <a href="#reservasi" class="book-btn">Pesan Sekarang</a>
           </div>
         </div>
       </div>
@@ -282,24 +283,18 @@
 
     <section class="reservasi" id="reservasi">
       <div class="reservasi-container">
-        <div class="map-section">
+        <div class="map-section" data-aos="fade-right" data-aos-delay="200">
           <div class="map-header">
             <h3>Lokasi Everwood Resort</h3>
             <p>Temukan kami di lokasi yang strategis dan mudah diakses</p>
           </div>
           <div class="map-container">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.346!2d112.6902!3d-7.2575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f96dc4a7bb09%3A0x17cc1a0e0a8c7a7a!2sEverwood%20Resort!5e0!3m2!1sen!2sid!4v1635000000000!5m2!1sen!2sid"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            >
-            </iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3053.7860719298815!2d132.63568690344817!3d-5.664926538058154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sresort!5e1!3m2!1sen!2sid!4v1756346476044!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div class="location-details">
             <div class="location-item">
               <div class="location-icon">📍</div>
-              <div>Jl. Raya Everwood No. 123, Surabaya, Jawa Timur 60115</div>
+              <div>Jl. Pasir Panjang - Langgur, Ngilngof, Kec. Kei Kecil, Kabupaten Maluku Tenggara, Maluku</div>
             </div>
             <div class="location-item">
               <div class="location-icon">📞</div>
@@ -311,12 +306,12 @@
             </div>
             <div class="location-item">
               <div class="location-icon">🕐</div>
-              <div>Check-in: 14:00 | Check-out: 12:00</div>
+              <div>Check-in: 08:00 | Check-out: 07:00</div>
             </div>
           </div>
         </div>
 
-        <div class="form-section">
+        <div class="form-section" data-aos="fade-down" data-aos-delay="200">
           <h2>Reservasi Sekarang</h2>
           <p>
             Isi formulir lengkap di bawah untuk memesan kamar Anda di Everwood
@@ -423,8 +418,8 @@
         <div class="footer-kiri">
           <div class="footer-logo"><span>Everwood</span> Resort</div>
           <div class="footer-address">
-            📍 Jl. Raya Everwood No. 123<br />
-            Surabaya, Jawa Timur 60115<br />
+            📍 Jl. Pasir Panjang - Langgur<br />
+            Ngilngof, Kec. Kei Kecil, Kabupaten Maluku Tenggara, Maluku<br />
             📞 +62 31 1234 5678
           </div>
           <div class="footer-copyright">
@@ -441,5 +436,12 @@
       </div>
     </footer>
     <script src="js.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // durasi animasi 1 detik
+        once: false, // animasi hanya muncul sekali saat pertama scroll
+      });
+    </script>
   </body>
 </html>

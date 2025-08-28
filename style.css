@@ -301,12 +301,13 @@ body {
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  will-change: transform;
   cursor: pointer;
 }
 
 .layanan-item:hover {
-  transform: translateY(-10px);
+  transform: scale(1.1) !important; 
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
@@ -382,13 +383,14 @@ body {
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.25s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  will-change: transform;
   cursor: pointer;
   position: relative;
 }
 
 .akomodasi-item:hover {
-  transform: translateY(-1px);
+  transform: scale(1.1) !important  ;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
@@ -727,7 +729,7 @@ footer {
 }
 
 .back-to-top:hover {
-  background-color: var(--warna);
+  background-color: var(--warna2);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
