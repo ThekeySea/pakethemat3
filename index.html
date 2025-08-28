@@ -21,8 +21,10 @@
         <a href="#reservasi">Reservasi</a>
       </div>
 
-      <div class="hamburger">
-        <a href="#" id="hamburger-menu">☰</a>
+      <div class="navbar-extra">
+        <a href="#" id="search"><i data-feather="search"></i></a>
+        <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
       </div>
     </nav>
 
@@ -168,10 +170,32 @@
           <div class="layanan-img">
             <img src="./gambar/spa-pijet.jpg" alt="Spa" />
           </div>
-          <h3>Spa</h3>
+          <h3>Spa & Massage</h3>
           <p>
             Pijat profesional yang memberikan relaksasi terbaik untuk tubuh dan
             jiwa Anda dengan terapis berpengalaman.
+          </p>
+        </div>
+
+        <div class="layanan-item">
+          <div class="layanan-img">
+            <img src="./gambar/concierge.jpeg" alt="concierge" />
+          </div>
+          <h3>Concierge Service</h3>
+          <p>
+            Tim concierge siap membantu pemesanan restoran, tiket, dan
+            rekomendasi aktivitas selama Anda menginap.
+          </p>
+        </div>
+
+        <div class="layanan-item">
+          <div class="layanan-img">
+            <img src="./gambar/freewifi.jpg" alt="freewifi" />
+          </div>
+          <h3>Free Wi-Fi</h3>
+          <p>
+            Akses internet cepat dan stabil di seluruh area resort, agar Anda
+            selalu terhubung.
           </p>
         </div>
       </div>
@@ -180,7 +204,7 @@
     <!-- AKOMODASI DIPERBAIKI -->
     <section class="akomodasi" id="akomodasi">
       <div class="baganatas">
-        <h1>Akomodasi <span>Kami</span></h1>
+        <h1>Akomodasi <span>Everwood</span> Resort</h1>
         <p>Berbagai pilihan ruangan terbaik untuk kenyamanan Anda</p>
       </div>
 
@@ -191,7 +215,7 @@
             <div class="price-tag">Rp 500K/malam</div>
           </div>
           <div class="akomodasi-content">
-            <h3>Kelas <span>Ekonomi</span></h3>
+            <h3>Tranquil Nest</h3>
             <p>
               Kamar nyaman dengan fasilitas standar yang cocok untuk budget
               traveler. Menawarkan kenyamanan dasar dengan desain minimalis yang
@@ -214,7 +238,7 @@
             <div class="price-tag">Rp 800K/malam</div>
           </div>
           <div class="akomodasi-content">
-            <h3>Kelas <span>Business</span></h3>
+            <h3>Serenity Room</h3>
             <p>
               Kamar yang lebih luas dengan fasilitas premium untuk pelancong
               bisnis. Dilengkapi area kerja dan akses eksklusif ke fasilitas
@@ -237,7 +261,7 @@
             <div class="price-tag">Rp 1.5JT/malam</div>
           </div>
           <div class="akomodasi-content">
-            <h3>Kelas <span>VIP</span></h3>
+            <h3>Royal Pavilion</h3>
             <p>
               Suite mewah dengan pemandangan taman yang menakjubkan. Fasilitas
               premium dan layanan butler pribadi untuk pengalaman tak
@@ -257,9 +281,165 @@
     </section>
 
     <section class="reservasi" id="reservasi">
-      <h1>Reservasi</h1>
+      <div class="reservasi-container">
+        <div class="map-section">
+          <div class="map-header">
+            <h3>Lokasi Everwood Resort</h3>
+            <p>Temukan kami di lokasi yang strategis dan mudah diakses</p>
+          </div>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.346!2d112.6902!3d-7.2575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f96dc4a7bb09%3A0x17cc1a0e0a8c7a7a!2sEverwood%20Resort!5e0!3m2!1sen!2sid!4v1635000000000!5m2!1sen!2sid"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
+          <div class="location-details">
+            <div class="location-item">
+              <div class="location-icon">📍</div>
+              <div>Jl. Raya Everwood No. 123, Surabaya, Jawa Timur 60115</div>
+            </div>
+            <div class="location-item">
+              <div class="location-icon">📞</div>
+              <div>+62 31 1234 5678</div>
+            </div>
+            <div class="location-item">
+              <div class="location-icon">✉️</div>
+              <div>info@everwoodresort.com</div>
+            </div>
+            <div class="location-item">
+              <div class="location-icon">🕐</div>
+              <div>Check-in: 14:00 | Check-out: 12:00</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>Reservasi Sekarang</h2>
+          <p>
+            Isi formulir lengkap di bawah untuk memesan kamar Anda di Everwood
+            Resort
+          </p>
+
+          <form id="reservationForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">Nama Depan</label>
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  placeholder="Nama depan"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Nama Belakang</label>
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  placeholder="Nama belakang"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="alamat@email.com"
+                required
+              />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Nomor Telepon</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="+62 812 3456 7890"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="guests">Jumlah Tamu</label>
+                <select id="guests" name="guests" required>
+                  <option value="">Pilih jumlah tamu</option>
+                  <option value="1">1 Orang</option>
+                  <option value="2">2 Orang</option>
+                  <option value="3">3 Orang</option>
+                  <option value="4">4 Orang</option>
+                  <option value="5+">5+ Orang</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="checkin">Tanggal Check-in</label>
+                <input type="date" id="checkin" name="checkin" required />
+              </div>
+              <div class="form-group">
+                <label for="checkout">Tanggal Check-out</label>
+                <input type="date" id="checkout" name="checkout" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="room">Tipe Kamar</label>
+              <select id="room" name="room" required>
+                <option value="">Pilih tipe kamar</option>
+                <option value="ekonomi">Tranquil Nest - Rp 1JT/malam</option>
+                <option value="business">Serenity Room - Rp 2.5JT/malam</option>
+                <option value="vip">Royal Pavilion - Rp 4.5JT/malam</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="specialRequests">Permintaan Khusus</label>
+              <textarea
+                id="specialRequests"
+                name="specialRequests"
+                placeholder="Masukkan permintaan khusus Anda (opsional)..."
+              ></textarea>
+            </div>
+
+            <button type="submit">Pesan Sekarang</button>
+          </form>
+        </div>
+      </div>
     </section>
 
+    <footer>
+      <div class="footer-content">
+        <div class="footer-kiri">
+          <div class="footer-logo"><span>Everwood</span> Resort</div>
+          <div class="footer-address">
+            📍 Jl. Raya Everwood No. 123<br />
+            Surabaya, Jawa Timur 60115<br />
+            📞 +62 31 1234 5678
+          </div>
+          <div class="footer-copyright">
+            &copy; 2025 Everwood Resort. Semua hak cipta dilindungi.
+          </div>
+        </div>
+
+        <div class="footer-kanan">
+          <button class="back-to-top" onclick="scrollToTop()">
+            <span class="back-to-top-icon">↑</span>
+            Kembali ke Atas
+          </button>
+        </div>
+      </div>
+    </footer>
     <script src="js.js"></script>
   </body>
 </html>

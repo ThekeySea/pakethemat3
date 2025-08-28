@@ -76,7 +76,7 @@ body {
   transform: scaleX(0.5);
 }
 
-.hamburger {
+#hamburger-menu {
   display: none;
 }
 
@@ -169,6 +169,7 @@ body {
 .about .logo h2 {
   color: var(--teks2);
   font-size: 2.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 .about .logo h2 span {
@@ -202,6 +203,7 @@ body {
   font-size: 2.2rem;
   margin-bottom: 3rem;
   color: var(--teks1);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 .fasilitas h2 span {
@@ -353,11 +355,12 @@ body {
 .akomodasi .baganatas h1 {
   font-size: 2.2rem;
   margin-bottom: 0.5rem;
-  color: var(--teks1);
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 .akomodasi .baganatas h1 span {
-  color: var(--warna3);
+  color: var(--teks1);
 }
 
 .akomodasi .baganatas p {
@@ -379,13 +382,13 @@ body {
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
   cursor: pointer;
   position: relative;
 }
 
 .akomodasi-item:hover {
-  transform: translateY(-10px);
+  transform: translateY(-1px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
@@ -485,43 +488,313 @@ body {
   transform: translateY(-2px);
 }
 
+.reservasi {
+  background-color: var(--bg);
+  color: white;
+  padding: 5rem 0 0;
+  margin: 0;
+  margin-bottom: 4rem;
+}
+
+.reservasi-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 7%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.map-section {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+}
+
+.map-header {
+  padding: 1.5rem;
+  background: var(--warna2);
+  color: white;
+}
+
+.map-header h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.map-header p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.map-container {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.location-details {
+  padding: 1.5rem;
+  background: white;
+  color: var(--teks2);
+}
+
+.location-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.location-item:last-child {
+  margin-bottom: 0;
+}
+
+.location-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 1rem;
+  color: var(--warna3);
+  font-size: 1.1rem;
+}
+
+.form-section {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  color: var(--teks1);
+  height: fit-content;
+}
+
+.form-section h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--teks1);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+.form-section > p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: var(--teks2);
+}
+
+.reservasi form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.reservasi form label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--teks1);
+  font-size: 0.95rem;
+}
+
+.reservasi form input,
+.reservasi form select,
+.reservasi form textarea {
+  padding: 0.9rem;
+  border-radius: 8px;
+  border: 2px solid #e0e0e0;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+}
+
+.reservasi form input:focus,
+.reservasi form select:focus,
+.reservasi form textarea:focus {
+  border-color: var(--warna3);
+  outline: none;
+}
+
+.reservasi form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.reservasi form button {
+  padding: 1rem 2rem;
+  background-color: var(--warna3);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  margin-top: 0.5rem;
+}
+
+.reservasi form button:hover {
+  background-color: var(--warna2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  background-color: var(--warna1);
+  color: white;
+  padding: 2rem 7% 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer-kiri {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.footer-logo span {
+  color: var(--teks1);
+}
+
+.footer-address {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.4;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.footer-copyright {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 0.3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.footer-kanan {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.back-to-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--warna3);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.back-to-top:hover {
+  background-color: var(--warna);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-top-icon {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.back-to-top:hover .back-to-top-icon {
+  transform: translateY(-2px);
+}
+
 /* Responsive Design */
-@media (max-width: 768px) {
-  .navbar .navigasi {
+@media (max-width: 1366px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .navigasi {
     display: none;
+    position: absolute;
+    top: 60px;  /* sesuai tinggi navbar */
+    right: 0;
+    background: var(--warna1);
+    flex-direction: column;
+    width: 250px;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    z-index: 9999;
   }
 
-  .hamburger {
-    display: block;
+  .navigasi.active {
+    display: flex;
   }
 
-  .hero .content h2 {
-    font-size: 2.5rem;
+  #hamburger-menu {
+    display: inline-block;
+    cursor: pointer;
+  }
+}
+
+
+  /* Mobile Phone */
+@media (max-width: 450px) {
+  .hero .content {
+    max-width: 90%;
+    text-align: center;
   }
 
   .layanan-container,
   .akomodasi-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* semua elemen full width */
   }
 
-  .container {
-    padding: 0 1rem;
+  .form-row {
+    grid-template-columns: 1fr; /* form input jadi satu kolom */
   }
 
-  .about .row {
-    flex-direction: column;
-    text-align: center;
+  .navigasi {
+    width: 100%; /* menu hamburger penuh layar */
+    right: 0;
+    top: 60px;
   }
 }
 
-@media (max-width: 480px) {
-  .hero .content h2 {
-    font-size: 2rem;
-  }
-
-  .fasilitas-item,
-  .layanan-item,
-  .akomodasi-item {
-    min-width: 250px;
-  }
-}

@@ -16,3 +16,26 @@ document.addEventListener("DOMContentLoaded", function () {
     );
   }
 });
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
+
+const navbarNav = document.querySelector('.navigasi');
+const hamburger = document.querySelector('#hamburger-menu');
+
+hamburger.addEventListener('click', () => {
+  navbarNav.classList.toggle('active');
+});
+
+document.addEventListener('click', (e) => {
+  if (!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
+    navbarNav.classList.remove('active');
+  }
+});
+feather.replace();
+
+
