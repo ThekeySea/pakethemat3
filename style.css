@@ -26,30 +26,36 @@ body {
   overflow-x: hidden;
 }
 
+/* ===== NAVBAR STYLES ===== */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.1);
-  padding: 0.5rem 7%;
+  padding: 0.8rem 7%;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 9999;
   border-bottom: 1px solid #0fb14b;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
 }
 
 .logo-navbar {
   font-weight: 600;
-  margin-left: 1.4rem;
   color: white;
   font-size: 1.5rem;
 }
 
 .logo-navbar span {
-  color: var(--teks1);
+  color: var(--warna3);
+}
+
+.navbar .navigasi {
+  display: flex;
+  align-items: center;
 }
 
 .navbar .navigasi a {
@@ -57,35 +63,54 @@ body {
   font-size: 1rem;
   display: inline-block;
   margin: 0 1rem;
+  transition: all 0.3s ease;
 }
 
 .navbar .navigasi a:hover {
-  color: var(--teks1);
+  color: var(--warna3);
 }
 
 .navbar .navigasi a::after {
   content: "";
   display: block;
   padding-bottom: 0.5rem;
-  border-bottom: 0.1rem solid var(--teks1);
+  border-bottom: 0.1rem solid var(--warna3);
   transform: scaleX(0);
-  transition: linear 0.2s;
+  transition: 0.3s;
 }
 
 .navbar .navigasi a:hover::after {
   transform: scaleX(0.5);
 }
 
-#hamburger-menu {
-  display: none;
+.navbar-extra {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
+.navbar-extra a {
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-extra a:hover {
+  color: var(--warna3);
+}
+
+#hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+/* ===== HERO SECTION ===== */
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("./gambar/resort.jpg");
+    url(./gambar/resort.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -143,13 +168,14 @@ body {
   background: linear-gradient(0deg, #f5f0e1 1%, rgba(245, 240, 225, 0) 25%);
 }
 
+/* ===== ABOUT SECTION ===== */
 .about {
   padding: 5rem 7% 3rem;
 }
 
 .about h2 {
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   margin-bottom: 3rem;
   color: var(--teks1);
 }
@@ -169,11 +195,11 @@ body {
 .about .logo h2 {
   color: var(--teks2);
   font-size: 2.5rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .about .logo h2 span {
-  color: var(--teks1);
+  color: var(--warna3);
 }
 
 .about .content {
@@ -193,6 +219,7 @@ body {
   font-size: 1.2rem;
 }
 
+/* ===== FASILITAS SECTION ===== */
 .fasilitas {
   padding: 5rem 7% 3rem;
   text-align: center;
@@ -203,7 +230,6 @@ body {
   font-size: 2.2rem;
   margin-bottom: 3rem;
   color: var(--teks1);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 .fasilitas h2 span {
@@ -217,6 +243,7 @@ body {
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  padding-bottom: 1rem;
 }
 
 .fasilitas-row::-webkit-scrollbar {
@@ -254,12 +281,8 @@ body {
   transition: transform 0.3s ease;
 }
 
-.fasilitas-item:hover {
-  transform: scale(1.1);
-}
-
 .fasilitas-item h3 {
-  margin-top: 0.8rem;
+  margin: 0.8rem 0;
   font-size: 1.3rem;
   color: var(--teks1);
   font-weight: 600;
@@ -272,6 +295,7 @@ body {
   line-height: 1.5;
 }
 
+/* ===== LAYANAN SECTION ===== */
 .layanan {
   padding: 5rem 7% 3rem;
   background-color: var(--bg);
@@ -301,13 +325,12 @@ body {
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-  will-change: transform;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
 
 .layanan-item:hover {
-  transform: scale(1.1) !important; 
+  transform: scale(1.05);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
@@ -324,10 +347,6 @@ body {
   transition: transform 0.3s ease;
 }
 
-.layanan-item:hover {
-  transform: scale(1.1);
-}
-
 .layanan-item h3 {
   padding: 1rem 1.5rem 0.5rem;
   font-size: 1.3rem;
@@ -342,7 +361,7 @@ body {
   line-height: 1.5;
 }
 
-/* AKOMODASI - DIPERBAIKI */
+/* ===== AKOMODASI SECTION ===== */
 .akomodasi {
   padding: 5rem 7% 3rem;
   background-color: var(--bg);
@@ -356,12 +375,11 @@ body {
 .akomodasi .baganatas h1 {
   font-size: 2.2rem;
   margin-bottom: 0.5rem;
-  color: white;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  color: var(--teks1);
 }
 
 .akomodasi .baganatas h1 span {
-  color: var(--teks1);
+  color: var(--warna3);
 }
 
 .akomodasi .baganatas p {
@@ -383,14 +401,13 @@ body {
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-  will-change: transform;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   position: relative;
 }
 
 .akomodasi-item:hover {
-  transform: scale(1.1) !important  ;
+  transform: scale(1.05);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
@@ -406,10 +423,6 @@ body {
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
-}
-
-.akomodasi-item:hover {
-  transform: scale(1.1);
 }
 
 .price-tag {
@@ -435,10 +448,6 @@ body {
   font-weight: 600;
   margin-bottom: 0.5rem;
   text-transform: capitalize;
-}
-
-.akomodasi-item h3 span {
-  color: var(--warna3);
 }
 
 .akomodasi-item p {
@@ -490,6 +499,7 @@ body {
   transform: translateY(-2px);
 }
 
+/* ===== RESERVASI SECTION ===== */
 .reservasi {
   background-color: var(--bg);
   color: white;
@@ -582,7 +592,6 @@ body {
   font-size: 2rem;
   margin-bottom: 0.5rem;
   color: var(--teks1);
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
 }
 
 .form-section > p {
@@ -657,6 +666,7 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* ===== FOOTER ===== */
 footer {
   background-color: var(--warna1);
   color: white;
@@ -685,25 +695,22 @@ footer {
   font-weight: 600;
   color: white;
   margin-bottom: 0.3rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .footer-logo span {
-  color: var(--teks1);
+  color: var(--warna3);
 }
 
 .footer-address {
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.4;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .footer-copyright {
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.7);
   margin-top: 0.3rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .footer-kanan {
@@ -743,60 +750,335 @@ footer {
   transform: translateY(-2px);
 }
 
-/* Responsive Design */
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large Desktop */
 @media (max-width: 1366px) {
   html {
     font-size: 100%;
   }
 }
 
+/* Desktop */
+@media (max-width: 1200px) {
+  .hero .content h2 {
+    font-size: 2.8rem;
+  }
+  
+  .reservasi-container {
+    gap: 2rem;
+  }
+}
+
 /* Tablet */
 @media (max-width: 1024px) {
+  .navbar {
+    padding: 0.8rem 5%;
+  }
+
   .navigasi {
-    display: none;
     position: absolute;
-    top: 60px;  /* sesuai tinggi navbar */
-    right: 0;
-    background: var(--warna1);
-    flex-direction: column;
+    top: 100%;
+    right: -100%;
+    background-color: rgba(178, 200, 186, 0.95);
     width: 250px;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-    z-index: 9999;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 2rem 1.5rem;
+    transition: 0.3s;
+    backdrop-filter: blur(10px);
+    border-left: 3px solid var(--warna3);
   }
 
   .navigasi.active {
-    display: flex;
+    right: 0;
+  }
+
+  .navigasi a {
+    color: white;
+    display: block;
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
   }
 
   #hamburger-menu {
     display: inline-block;
     cursor: pointer;
+    font-size: 1.5rem;
   }
-}
 
-
-  /* Mobile Phone */
-@media (max-width: 450px) {
   .hero .content {
-    max-width: 90%;
+    padding: 1.4rem 5%;
+  }
+
+  .hero .content h2 {
+    font-size: 2.5rem;
+  }
+
+  .about,
+  .fasilitas,
+  .layanan,
+  .akomodasi {
+    padding: 4rem 5% 3rem;
+  }
+
+  .reservasi-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 5%;
+  }
+
+  .about .row {
+    flex-direction: column;
     text-align: center;
+  }
+
+  .about .logo {
+    order: 2;
+  }
+
+  .about .content {
+    order: 1;
+  }
+
+  .fasilitas-item {
+    width: 200px;
   }
 
   .layanan-container,
   .akomodasi-container {
-    grid-template-columns: 1fr; /* semua elemen full width */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 
-  .form-row {
-    grid-template-columns: 1fr; /* form input jadi satu kolom */
+  footer {
+    padding: 2rem 5% 1.5rem;
   }
 
-  .navigasi {
-    width: 100%; /* menu hamburger penuh layar */
-    right: 0;
-    top: 60px;
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
   }
 }
 
+/* Mobile Large */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.8rem 4%;
+  }
+
+  .hero .content {
+    padding: 1.4rem 4%;
+    text-align: center;
+  }
+
+  .hero .content h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero .content p {
+    font-size: 1rem;
+  }
+
+  .about,
+  .fasilitas,
+  .layanan,
+  .akomodasi {
+    padding: 3rem 4% 2rem;
+  }
+
+  .about h2,
+  .fasilitas h2,
+  .layanan h2,
+  .akomodasi .baganatas h1 {
+    font-size: 1.8rem;
+  }
+
+  .fasilitas-row {
+    gap: 1rem;
+  }
+
+  .fasilitas-item {
+    width: 180px;
+  }
+
+  .layanan-container,
+  .akomodasi-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .reservasi-container {
+    padding: 0 4%;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .map-container {
+    height: 300px;
+  }
+
+  footer {
+    padding: 1.5rem 4%;
+  }
+}
+
+/* Mobile Medium */
+@media (max-width: 576px) {
+  .navbar {
+    padding: 0.8rem 3%;
+  }
+
+  .logo-navbar {
+    font-size: 1.3rem;
+  }
+
+  .navigasi {
+    width: 280px;
+    padding: 1.5rem;
+  }
+
+  .hero .content {
+    padding: 1.4rem 3%;
+    max-width: 100%;
+  }
+
+  .hero .content h2 {
+    font-size: 1.8rem;
+  }
+
+  .about,
+  .fasilitas,
+  .layanan,
+  .akomodasi {
+    padding: 3rem 3% 2rem;
+  }
+
+  .about h2,
+  .fasilitas h2,
+  .layanan h2,
+  .akomodasi .baganatas h1 {
+    font-size: 1.6rem;
+  }
+
+  .fasilitas-item {
+    width: 160px;
+  }
+
+  .fasilitas-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .fasilitas-item p {
+    font-size: 0.85rem;
+  }
+
+  .layanan-item h3,
+  .akomodasi-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .layanan-item p,
+  .akomodasi-item p {
+    font-size: 0.9rem;
+  }
+
+  .reservasi-container {
+    padding: 0 3%;
+  }
+
+  .form-section {
+    padding: 1.5rem;
+  }
+
+  .form-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .map-container {
+    height: 250px;
+  }
+
+  footer {
+    padding: 1.5rem 3%;
+  }
+
+  .footer-logo {
+    font-size: 1.2rem;
+  }
+}
+
+/* Mobile Small */
+@media (max-width: 450px) {
+  .navbar {
+    padding: 0.8rem 2%;
+  }
+
+  .logo-navbar {
+    font-size: 1.1rem;
+  }
+
+  .navigasi {
+    width: 100%;
+    right: -100%;
+  }
+
+  .hero .content {
+    padding: 1.4rem 2%;
+  }
+
+  .hero .content h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero .content .cta {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .about,
+  .fasilitas,
+  .layanan,
+  .akomodasi {
+    padding: 2rem 2%;
+  }
+
+  .about h2,
+  .fasilitas h2,
+  .layanan h2,
+  .akomodasi .baganatas h1 {
+    font-size: 1.4rem;
+  }
+
+  .fasilitas-item {
+    width: 140px;
+  }
+
+  .reservasi-container {
+    padding: 0 2%;
+  }
+
+  .form-section {
+    padding: 1rem;
+  }
+
+  .form-section h2 {
+    font-size: 1.4rem;
+  }
+
+  footer {
+    padding: 1rem 2%;
+  }
+
+  .back-to-top {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+  }
+}
